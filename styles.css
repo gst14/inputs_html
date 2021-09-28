@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .container {
@@ -23,25 +23,43 @@
   width: 90vw;
   /* border: 1px dashed #000; */
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: .2fr .8fr;
-  grid-template-areas: "title title"
-  "input value";
+  grid-template-rows: 0.2fr 0.8fr;
+  grid-template-areas:
+    "title title"
+    "input value";
   background-color: #fff;
 }
-.container_item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.label_title{
-    grid-area: title;
-    background-color: #375a7d;
-    color: #fff;
-    text-align: center;
+.label_title {
+  grid-area: title;
+  background-color: #375a7d;
+  color: #fff;
+  text-align: center;
 }
-.input_control{
-    grid-area: input;
+.input_control {
+  grid-area: input;
 }
-.value{
-    grid-area: value;
+.value {
+  grid-area: value;
+}
+
+@media screen and (max-width: 470px) {
+  .type-section {
+    display: grid;
+    height: 20vh;
+    width: 90vw;
+    /* border: 1px dashed #000; */
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.4fr 0.4fr;
+    grid-template-areas:
+      "title"
+      "input"
+      "value";
+
+    background-color: #fff;
+  }
 }
